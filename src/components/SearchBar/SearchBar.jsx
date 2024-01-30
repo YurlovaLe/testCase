@@ -14,8 +14,8 @@ export const SearchBar = ({ initialValue = '' }) => {
 
   return(
     <S.SearchForm onSubmit={onSubmit}>
-      <S.SearchLogoLink href="/">
-        <S.SearchLogoImg src="/img/logo.png" alt="logo" />
+      <S.SearchLogoLink href={process.env.PUBLIC_URL}>
+        <S.SearchLogoImg src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="logo" />
       </S.SearchLogoLink>
       <S.SearchText
         type="search"
